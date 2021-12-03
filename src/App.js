@@ -5,6 +5,8 @@ import LoginPage from "./components/login/LoginPage";
 import DashboardPage from "./components/dashboard/DashboardPage";
 import Nav from "./components/layout/Nav";
 import { AuthProvider } from "./context/AuthContext";
+import PostPage from "./components/dashboard/posts/PostPage";
+import AddPost from "./components/dashboard/posts/AddPost";
 import "./App.css";
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
             <Route path="/" exact="true" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/dashboard" exact="true" element={<DashboardPage />} />
+            <Route path="/dashboard/posts" exact="true" element={<PostPage />} />
+            <Route path="/dashboard/posts/add" element={<AddPost />} />
           </Routes>
         </div>
       </Router>

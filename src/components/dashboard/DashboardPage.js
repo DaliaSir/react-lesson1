@@ -1,11 +1,17 @@
+import PropTypes from "prop-types";
 import Heading from "../layout/Heading";
-import MediaDropdown from "./media/MediaDropdown";
+import DashboardMenu from "./DashboardMenu"
 
-export default function DashboardPage() {
+export default function DashboardPage({ children }) {
   return (
     <>
       <Heading content="Dashboard" />
-      <MediaDropdown />
+      <DashboardMenu />
+      {children ? children : <p>Select a section</p>}
     </>
   );
 }
+
+DashboardPage.propTypes = {
+  children: PropTypes.node,
+};
